@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/1.35.0/iconfont/tabler-icons.min.css" integrity="sha512-tpsEzNMLQS7w9imFSjbEOHdZav3/aObSESAL1y5jyJDoICFF2YwEdAHOPdOr1t+h8hTzar0flphxR76pd0V1zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="title" content="Polytoia Voxel Terrain Generator">
+        <meta name="description" content="cool stuff that make terrain generated as polytoria file">
+        <meta name="keywords" content="Polytoria, Convert">
+        <meta name="robots" content="index, follow">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="language" content="English">
+        <meta name="author" content="DevPixels">
+        
+        <title>PTM Terrain Generator</title>
+    </head>
+    <body>
+        <div id="File-Upload">
+            
+            <div id="File-Upload-Inner">
+                <h1 id="FileUploadTitle">PTM Terrain Generator</h1>
+                <div id="Configs">
+                </br>
+
+                <label>Map Width</label>
+                <input value="50" id="Map-Width" type="number"></br>
+                <label>Map Height</label>
+                <input value="50" id="Map-Height" type="number"></br>
+                <label>Map Smoothness</label>
+                <input value="4" id="Map-Smoothness" type="number"></br>
+                <label>Water Enabled: </label>
+                <input id="Water-Enabled" value="true" type="checkbox"></br>
+                <details>
+                    <summary>Advanced</summary>
+                    <label>Generate Sand: </label>
+                    <input id="Generate-Sand" value="true" type="checkbox"></br>
+                    <label>Generate Trees: </label>
+                    <input id="Generate-Tree" value="true" type="checkbox"></br>
+                    <label>Generate Tree chance(2 is highest): </label>
+                    <input value="20" id="Tree-Rate" type="number"></br>
+                </details>
+                </div>
+            </br>
+                <button id="ProcessFileIcon">Start!</button>
+                <img id="LoadingIcon" width="70" height="70" src="Images/loading.gif" style="display: none;" >
+            </div>
+        </div>
+        <img id="ImagePreview" src="https://polytoria.com/assets/img/pending.png">
+        <progress value="0" max="100" id="processbar">
+
+    </body>
+
+        <script src="bundle.js"></script>
+
+        <script>
+            document.getElementById("Water-Enabled").checked = true
+            document.getElementById("Generate-Sand").checked = true
+            document.getElementById("Generate-Tree").checked = true
+        </script>
+        
+    </script>
+</html>
